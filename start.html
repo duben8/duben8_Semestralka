@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <title>Covid-19 SR</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <link href="http://localhost:63342/duben8_Semestralka/myStyling.css" rel="stylesheet">
+</head>
+<body>
+<!--Horna lista-->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Rýchla navigácia</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Aktuality <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Štatistiky</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ostatné</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="dropdown-item" href="signInPage.html">Výsledky antigénových testov</a>
+                    <a class="dropdown-item" href="FAQpage.html">FAQ</a>
+                    <a class="dropdown-item" href="#">Grafy</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Nájdi na stránke</button>
+        </form>
+    </div>
+</nav>
+
+<main class="container">
+    <div class="actStartMine">
+    <div class="row">
+        <!--Aktuality-->
+        <div class="col-md-8 blog-main">
+            <!-- Nadpis Aktuality-->
+            <h3 class="pb-4 mb-4 font-italic border-bottom" >
+                Aktuality
+            </h3>
+            <!-- Aktualita 1 , bude sa neskor generovat phpckom , momentalne duplicita kodu-->
+            <div class="blog-post">
+                <h2 class="blog-post-title">Oficiálny dátum plošného testovania!</h2>
+                <p class="blog-post-meta">Október 15, 2020</p>
+                    <div class="importantColor">
+                    Plošné testovanie sa uskutoční 22.10.2020.
+                    </div>
+                <hr>
+                <p>Pred absolvovaním testu je nutné vyplniť formulár ktorý nájdete vo svojom účte po prihlásení.</p>
+                <p>
+                    Dôrazne Vás žiadame o dodržovanie 2 metrových odstupov.
+                    <strong>Doneste si občianský preukaz, kartu poistenca a majte správne nasadené rúško!</strong>
+                </p>
+                <p>Trvanie testovania je cca 25 minút.</p>
+                <p>
+                    <div class="quotingStyle">Sme ochotný akceptovať riziko nákazy pri účasti na testovaní</div>
+                - povedal Igor Matovič
+            </div>
+            <!-- Aktualita 2-->
+            <div class="blog-post">
+                <h2 class="blog-post-title">Sprísnenie opatrení voči pandemií!</h2>
+                <p class="blog-post-meta">September 28, 2020 </p>
+
+
+                    <div class="importantColor">Od 15.10.2020 budú rúška povinné aj v exteriéri , zatvárajú sa reštaurácie a fitness centrá!</div>
+                <p>Napriek kritike a odporu časti vládnej koalície premiér Igor Matovič zatvoril viaceré podniky ktoré sa ešte nemali čas spamätať z prvej vlny.
+                Richard Sulík na tlačovej konferencii uviedol:
+                    <div class="quotingStyle">
+                        Igor práve zabil ekonomiku.
+                    </div>
+
+            </div>
+        </div>
+
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h4 class="font-italic">Informácia</h4>
+                <p>Pri používaní tejto stránky súhlasite s cookies</p>
+            </div>
+
+            <div class="p-4">
+                <h4 class="font-italic">Aktuality z daných mesiacov.</h4>
+                <ol class="list-unstyled mb-0">
+                    <li><a href="#">Marec 2020</a></li>
+                    <li><a href="#">Apríl 2020</a></li>
+                    <li><a href="#">Máj 2020</a></li>
+                    <li><a href="#">Jún 2020</a></li>
+                    <li><a href="#">Júl 2020</a></li>
+                    <li><a href="#">August 2020</a></li>
+                    <li><a href="#">September 2020</a></li>
+                    <li><a href="#">Október 2020</a></li>
+                    <li><a href="#">November 2020</a></li>
+                    <li><a href="#">December 2020</a></li>
+                </ol>
+            </div>
+
+            <div class="p-4">
+                <h4 class="font-italic">Nájdete nás aj na sociálnych sieťach</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ol>
+            </div>
+        </aside>
+
+    </div>
+    </div>
+</main>
+</body>
+</html>

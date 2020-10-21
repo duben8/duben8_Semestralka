@@ -1,0 +1,33 @@
+.actStartMine {
+    position: relative;
+    top: 100px;
+}
+.importantColor {
+    color: darkred;
+    font-weight: bold;
+}
+.quotingStyle {
+    color: #002752;
+    font-weight: lighter;
+    font-style: italic;
+}
+.strongText {
+    color: #171a1d;
+    font-style: oblique;
+    font-weight: bolder;
+    font-size: large;
+    background-color: #7abaff;
+}
+.singInBackGround {
+    background-image: url("myImages/coronaBackround.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+.FAQquestionHead {
+    color: #002752;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: large;
+}
