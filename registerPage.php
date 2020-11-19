@@ -12,20 +12,17 @@
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center singInBackGround">
-    <form class="form-signin">
+  <form class="form-signin" action="testResults.php" method="post">
   <img class="mb-4" src="myImages/unnamed.png" alt=""   >
-  <h1 class="h3 mb-3 strongText">Zadajte prosím Vaše rodné číslo a heslo</h1>
+  <h1 class="h3 mb-3 strongText">Zadajte prosím Vaše rodné číslo , heslo a email</h1>
   <label class="sr-only">Rodné číslo</label>
-  <input id="inputBirthNumber" class="form-control" placeholder="Rodné číslo" required autofocus>
+    <input type="text" id="inputBirthNumber" class="form-control" placeholder="Rodné číslo" required autofocus>
   <label for="inputPassword" class="sr-only">Heslo</label>
   <input type="password" id="inputPassword" class="form-control" placeholder="Heslo" required>
-  <div class="checkbox mb-3">
-
-      <input type="checkbox" value="remember-me"> <div class="strongText">Zapamätať si ma</div>
-
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Prihlásiť sa</button>
-  <p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required >
+      <button class="btn btn-lg btn-primary btn-block"  type="submit" formaction="">Zaregistrovat sa</button>
+  
 </form>
 </body>
 </html>
