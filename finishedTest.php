@@ -8,6 +8,7 @@ class FinishedTest
     private string $type;
     private string $result;
     private string  $tested_user;
+    private int $id;
 
     /**
      * FinishedTest constructor.
@@ -17,13 +18,30 @@ class FinishedTest
      * @param bool $result
      * @param string $tested_user
      */
-    public function __construct(string $orderTestDate, string $testDate, string $type, bool $result, string $tested_user)
+    public function __construct(int $id, $orderTestDate, string $testDate, string $type, bool $result, string $tested_user)
     {
         $this->orderTestDate = $orderTestDate;
         $this->testDate = $testDate;
         $this->type = $type;
         $this->result = $result;
         $this->tested_user = $tested_user;
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 
     /**

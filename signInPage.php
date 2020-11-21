@@ -12,7 +12,7 @@
     <link href="signin.css" rel="stylesheet">
   </head>
   <body class="text-center singInBackGround">
-    <form class="form-signin" action="login_form.php" method="post">
+    <form class="form-signin" action="handling_forms/login_form.php" method="post">
   <img class="mb-4" src="myImages/unnamed.png" alt=""   >
   <h1 class="h3 mb-3 strongText">Zadajte prosím Vaše rodné číslo a heslo</h1>
   <label class="sr-only">Rodné číslo</label>

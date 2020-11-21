@@ -38,7 +38,9 @@ class Database
         $bookedTestsFetched = $this->database->query('SELECT * FROM booked_tests WHERE (ORDERING_USER = ' . $birthNumber . ')');
         $bookedTests = [];
         foreach ($bookedTestsFetched as $test) {
-            $newBookedTest = new BookedTest("" . $test['ORDER_DATE'] , $test['TYPE'], $test['ORDERING_USER']);
+            $temp = $test['ID_ORDER'];
+            $temp2 = intval($test['ID_ORDER']);
+            $newBookedTest = new BookedTest(intval($test['ID_ORDER']),"" . $test['ORDER_DATE'] , $test['TYPE'], $test['ORDERING_USER']);
             $bookedTests[] = $newBookedTest;
         }
         $finishedTestsFetched = [];
@@ -50,7 +52,7 @@ class Database
             if($test['RESULT'] == 1) {
                 $testResult = true;
             }
-            $newFinishedTest = new FinishedTest("" . $test['ORDER_TEST'] , $test['TEST_DATE'],$test['TYPE'],$testResult, $test['TESTED_USER']);
+            $newFinishedTest = new FinishedTest(intval($test['ID_TEST']) ,"" . $test['ORDER_TEST'] , $test['TEST_DATE'],$test['TYPE'],$testResult, $test['TESTED_USER']);
             $finishedTests[] = $newFinishedTest;
         }
         $userInfo = [];
@@ -60,8 +62,21 @@ class Database
 
     }
     public function bookTest(string $birthNumber , string $date , string $type) : void{
-        $statement = "INSERT INTO booked_tests (ORDERING_USER , ORDER_DATE , TYPE  ) VALUES('". $birthNumber ."' , STR_TO_DATE('" . $date . "'" . " , '%d %m %Y' "  . " ) , " . "'" . $type . "');";
+        $statement = "INSERT INTO booked_tests (ORDERING_USER , ORDER_DATE , TYPE  ) VALUES('". $birthNumber ."' , '" . $date . "'," . "'" . $type . "');";
         $this->database->exec($statement);
 
     }
+    public function deleteFinishedTest(int $id) {
+        $statement = "DELETE FROM FINISHED_TESTS WHERE FINISHED_TESTS.ID_TEST=" . $id . ";";
+        $this->database->exec($statement);
+    }
+    public function deleteBookedTest(int $id) {
+        $statement = "DELETE FROM BOOKED_TESTS WHERE BOOKED_TESTS.ID_ORDER=" . $id . ";";
+        $this->database->exec($statement);
+    }
+    public function editDateBookedTest(int $id , string $new_date) {
+        $statement = "UPDATE BOOKED_TESTS SET BOOKED_TESTS.ORDER_DATE='" . $new_date . "'  WHERE BOOKED_TESTS.ID_ORDER=" . $id . ";";
+        $this->database->exec($statement);
+    }
+
 }

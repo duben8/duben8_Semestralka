@@ -6,12 +6,29 @@ class BookedTest
     private string $type;
     private string $orderingUser;
     private string $orderDate;
-    public function __construct($orderDate, $type,$orderingUser)
+    private int $id;
+    public function __construct(int $id, string $orderDate, string $type, string $orderingUser)
     {
-
+        $this->id = $id;
         $this->orderDate = $orderDate;
         $this->type = $type;
         $this->orderingUser = $orderingUser;
+    }
+
+    /**
+     * @return int
+     */
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId(int $id): void
+    {
+        $this->id = $id;
     }
 
     /**
